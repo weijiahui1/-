@@ -28,7 +28,7 @@
     宿主对象 主要是指 DOM和BOM
     原生对象 是Object、Function、Array、String、Boolean、Number、Date、RegExp、Error、Math等对象。
 
-### 4.typeof 
+### 4. typeof 
     typeof 1 // 'number'
     typeof '1' // 'string'
     typeof undefined // 'undefined'
@@ -53,7 +53,7 @@
     Object.prototype.toString.call(undefined) // "[object Undefined]" 
     Object.prototype.toString.call(Symbol(1)) // "[object Symbol]"
     
-### 6.js实现数值千分位
+### 6. js实现数值千分位
     number.toLocaleString() 
     
 ### 
