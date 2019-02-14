@@ -25,7 +25,7 @@
     typeof b // b 没有声明，但是还会显示 undefined
 
     typeof function(){} // 'Function'
-    #### typeof 对于对象，除了函数都会显示 object
+> typeof 对于对象，除了函数都会显示 object
     typeof [] // 'object'
     typeof {} // 'object'
     typeof console.log // 'function'
