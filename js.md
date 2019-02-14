@@ -6,8 +6,7 @@
         Boolean
         null
         undefined
-        symbol  
-        ECMAScript 2015 新增: Symbol  (创建后独一无二且不可变的数据类型 )
+        symbol --- ECMAScript 2015 新增: Symbol  (创建后独一无二且不可变的数据类型 )
         
     链接：http://es6.ruanyifeng.com/#docs/symbol
     2) 引用类型
