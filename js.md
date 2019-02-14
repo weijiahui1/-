@@ -25,8 +25,8 @@
     参考：https://www.ibm.com/developerworks/cn/web/wa-objectsinjs-v1b/index.html
     
 ### 3. 请指出 JavaScript 宿主对象和原生对象的区别？
-宿主对象 主要是指 DOM和BOM
-原生对象 是Object、Function、Array、String、Boolean、Number、Date、RegExp、Error、Math等对象。
+    宿主对象 主要是指 DOM和BOM
+    原生对象 是Object、Function、Array、String、Boolean、Number、Date、RegExp、Error、Math等对象。
 
 ### 4.typeof 
     typeof 1 // 'number'
