@@ -64,6 +64,26 @@
     5.被当做事件处理函数，上写文是触发事件的DOM元素
     6.用new调用函数，上下文是函数体内秘密创建的空白对象
     7.用apply、call执行上下文
+### 8. apply、call和bind
+    apply() 和 call()
+    第一个参数： 指定 this 的值
+    第二个参数：实际的参数 apply 是数组 call 是一个一个传递
+    
+    bind
+    .call() 或者 .apply() 方法会立即执行，如果函数有返回值会获得返回值
+    .bind() 方法不会立即执行目标函数，而是返回一个原函数的拷贝，并且拥有指定this值和初始化函数
+
+```javascript
+    function a() {}
+
+console.log(typeof a.bind() === 'function'); // 返回是true，先证明a.bind()是一个函数
+console.log(a.bind()); // 输出function a() {}，跟原函数一样
+console.log(a.bind() == a); // false
+console.log(a.bind() === a); // false 不管是 === 还是 == 都是false，证明是拷贝出来一份而不是原先的那个函数
+```
+    
+    
+
     
     
 
