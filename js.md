@@ -65,6 +65,7 @@ Object.prototype.toString.call(Symbol(1)) // "[object Symbol]"
     5.被当做事件处理函数，上写文是触发事件的DOM元素
     6.用new调用函数，上下文是函数体内秘密创建的空白对象
     7.用apply、call执行上下文
+    
 ### 8. apply、call和bind
     apply() 和 call()
     第一个参数： 指定 this 的值
@@ -81,7 +82,30 @@ console.log(a.bind()); // 输出function a() {}，跟原函数一样
 console.log(a.bind() == a); // false
 console.log(a.bind() === a); // false 不管是 === 还是 == 都是false，证明是拷贝出来一份而不是原先的那个函数
 ```
+
 ### 9.模拟实现bind方法
+    没有注释的：
+```javascript
+if (!Function.prototype.bind) {
+  Function.prototype.bind = function(oThis) {
+    if (typeof this !== 'function') {
+      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+    }
+    var aArgs = Array.prototype.slice.call(arguments, 1);
+    var fToBind = this;
+    var fNOP = function() {};
+    var fBound  = function() {
+        return fToBind.apply(this instanceof fBound ? this : oThis, aArgs.concat(Array.prototype.slice.call(arguments)));
+    };
+    if (this.prototype) {
+      fNOP.prototype = this.prototype;
+    }
+    fBound.prototype = new fNOP();
+    return fBound;
+  };
+}
+```
+    加注释的：
 ```javascript
 // 判断当前环境的Function对象的原型上有没有bind这个方法，如果没有，那我们就自己添加一个
 if (!Function.prototype.bind) {
@@ -138,6 +162,8 @@ if (!Function.prototype.bind) {
   };
 }
 ```
+
+
 
 
 
