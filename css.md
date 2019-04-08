@@ -69,5 +69,11 @@
         :enabled
         :disabled 控制表单控件的禁用状态。
         :checked 单选框或复选框被选中
-    
+
+    ### 6.写出5种css隐藏元素的办法
+        1. opacity: 0
+        2. visibility: hidden
+        3. display: none
+        4. position: absolute; top: -9999px; left: -9999px;
+        5. clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
     
