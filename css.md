@@ -33,6 +33,7 @@
     2）页面被加载时，link会同时被加载，而@import引用的css会等到页面加载结束后加载。
     3）link是html标签，因此没有兼容性，而@import只有IE5以上才能识别。
     4）link方式样式的权重高于@import的。
+
  ### 5.css3有哪些新特性
     1）新增各种css选择器
     2）圆角  border-radius
@@ -70,7 +71,7 @@
         :disabled 控制表单控件的禁用状态。
         :checked 单选框或复选框被选中
 
-    ### 6.写出5种css隐藏元素的办法
+  ### 6.写出5种css隐藏元素的办法
         1. opacity: 0
         2. visibility: hidden
         3. display: none
