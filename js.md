@@ -163,7 +163,37 @@ if (!Function.prototype.bind) {
 }
 ```
 
-
+### 10.将这段英文this is a pen首字母大写
+```javascript
+    // 方法一：
+    function bigLetter(str){
+        let newArr = str.split(" ").map((v,i)=>{
+            return v.slice(0,1).toUpperCase() + v.slice(1)
+        })
+        return newArr.join(" ")
+    }
+    // 方法二：
+    function bigLetter(str){
+        bigStr = str.toLowerCase().replace(/w+/g, function(word){
+            return word.substring(0,1).toUpperCase()+word.substring(1);
+        });
+        return bigStr; 
+    }
+```
+### 11.实现一个方法，找出一个数组中重复的元素
+```javascript
+    // 举例子： arr = [1,2,3,4,1,1,2,4,4]  输出 [1,2,4]
+    Array.prototype.repeNum = function () {
+        let new_arr = this.sort();  // 先排序
+        let res = [];
+        for( let i = 0; i < new_arr.length; i++){
+            if(new_arr[i] == new_arr[i+1] && new_arr[i] != new_arr[i-1]) {
+                res.push(new_arr[i]);
+            }
+        }
+        return res
+    }
+```   
 
 
 
